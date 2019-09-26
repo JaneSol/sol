@@ -1,0 +1,39 @@
+.benefit {
+    background-color: rgb(246, 246, 246);
+    min-height: 470px;
+    padding: 67px 0 100px 0;
+    }     
+.wrapper {
+    margin-top: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    }
+.benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+    &__header {
+        margin-top: 40px;
+        font-size: 18px;
+        font-weight: 700;;
+        color: rgb(13, 13, 13);
+        text-align: center; 
+    }         
+    &__descr {
+        margin-top: 30px;
+        font-size: 14px;
+        font-weight: 500;
+        color: rgb(13, 13, 13);
+        text-align: center; 
+        max-width: 270px;
+        a {
+            color: $main-color;
+        } 
+    }
+}
