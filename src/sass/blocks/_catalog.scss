@@ -1,0 +1,173 @@
+.catalog {
+    padding-bottom: 100px;
+    &__tabs {
+        margin-top: 70px;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    &__tab {
+        border: 2px solid rgb(208, 208, 208);
+        width: 216px;
+        height: 46px;
+        font-size: 18px;
+        font-weight: 500;
+        color: rgb(107, 107, 107);
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 48px;
+        transform: skewX(-25deg);
+        margin: 0 5px;
+        cursor: pointer;
+        transition: 0.5s all;
+        &:hover {
+            box-shadow: 3px 3px 20px $main-color;
+            border: none;
+        }
+        div {
+            transform: skewX(25deg);
+        }
+        &_active {
+            color: #fff;
+            background-color: $main-color;
+            border: none;
+        }       
+    }
+    &__content {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+    &__item {
+        margin-top: 50px;
+        border: 2px rgb(232, 232, 232) solid;
+        width: 300px;
+        min-height: 440px;
+        padding: 20px 20px 26px 20px;
+        overflow: hidden;
+    }
+    &__img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: 200px;    
+    }
+    &__subtitle {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 700;
+        color: rgb(13, 13, 13);
+        text-align: center;         
+    }
+    &__desc {
+        margin-top: 16px;
+        font-size: 14px;
+        color: rgb(13, 13, 13);
+        text-align: center;        
+    }
+    &__link, &__back {
+        display: block;
+        width: 100%;
+        margin-top: 17px;
+        font-size: 14px;
+        font-weight: 700;
+        color: $main-color;
+        text-decoration: underline;
+        text-transform: uppercase;
+        text-align: center;
+        &:hover {
+            color: $main-color;
+        }
+    } 
+    &__hr {
+        border-color: rgb(232, 232, 232);
+        border-bottom: none;
+        margin-top: 19px;
+        margin-bottom: 20px;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__old {
+        font-size: 14px;
+        font-weight: 300;
+        color: rgb(85, 85, 85);
+        text-decoration: line-through;
+        text-align: left;
+    }
+    &__now {
+        font-size: 20px;
+        color: rgb(5, 5, 5);
+        text-align: left;
+        font-weight: 700;
+    }
+    &__wrapper {
+        display: flex;
+        width: calc(200% + 40px);
+        margin-right: 20px;
+    }
+    &__content {
+        width: 50%;
+        margin-right: 0px;
+        transform: translateX(-100%);
+        transition: 0.5s all;
+        &_active {
+            transform: translateX(0%);
+            margin-right: 20px;
+        }
+    }
+    &__list {
+        position: relative;
+        width: 50%;
+        margin-left: 20px;
+        transform: translateX(0%);
+        padding-right: 20px;
+        transition: 0.5s all;
+        padding-left: 19px;
+        margin-bottom: 0;
+        list-style-type: none;
+        &_active {
+            transform: translateX(-100%);
+            margin-left: 0px; 
+        }
+        li {
+            position: relative;
+            font-size: 14px;
+            color: rgb(85, 85, 85);
+            font-weight: 300;
+            margin-bottom: 20px;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color:$main-color;
+                left: -14px;
+                top: 7px;
+            }
+            
+        }
+    }
+    &__card {
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_active{
+            display: flex;
+        }
+    }
+    &__back {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(calc(-50% - 19px));
+    }
+}
