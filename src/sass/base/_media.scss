@@ -273,4 +273,24 @@
         width: 280px;
      }
     }
+.modal {
+    padding: 20px;
+    width: 300px;
+    &__close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+}
+}
+.feed-form {
+    width: 260px;
+    }
+.footer {
+    margin-top: 40px;
+    &__info {
+        width: 300px;
+        height: 270px; 
+        padding: 15px;
+}
+}
 }
